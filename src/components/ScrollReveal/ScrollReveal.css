@@ -1,0 +1,23 @@
+/* Astrion-style Scroll Reveal & Stagger Animation */
+.scroll-reveal-item {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 32px));
+  transition: opacity var(--reveal-duration, 0.65s) cubic-bezier(0.16, 1, 0.3, 1),
+              transform var(--reveal-duration, 0.65s) cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--stagger-delay, 0s);
+  will-change: opacity, transform;
+}
+
+.scroll-reveal-item.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

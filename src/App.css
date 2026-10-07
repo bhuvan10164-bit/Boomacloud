@@ -1,0 +1,12 @@
+/* App Site Wrapper */
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--bg-primary);
+}
+
+main {
+  flex: 1;
+}

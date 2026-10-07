@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="cloudGrad" x1="8" y1="18" x2="56" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#234E8D"/>
+      <stop offset="100%" stop-color="#1D3F73"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="4" width="64" height="60" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1D3F73" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <!-- Outer Cloud Contour -->
+  <path d="M44.5 49H17C10.9 49 6 44.1 6 38C6 32.5 10 28 15.3 27.2C16.8 19.6 23.5 14 31.5 14C38.3 14 44.2 18.2 46.5 24.3C51.8 25.1 56 29.7 56 35.2C56 41.7 50.8 47 44.5 49Z" 
+        fill="url(#cloudGrad)" 
+        stroke="#1D3F73" 
+        stroke-width="2"
+        filter="url(#shadow)"/>
+  <!-- Inner Cutout/Light center to match the logo cloud style -->
+  <path d="M43 45H18C13.6 45 10 41.4 10 37C10 33 13 29.7 16.9 29.1C18.2 23.3 23.3 19 29.5 19C34.7 19 39.2 22.2 41 27C45 27.6 48 31.1 48 35.3C48 40.1 44.1 44 43 45Z" 
+        fill="#FFFFFF"/>
+  <!-- Boomacloud Orange Dot Accent -->
+  <circle cx="43" cy="23" r="6.5" fill="#F58232"/>
+</svg>

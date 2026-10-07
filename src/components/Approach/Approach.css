@@ -1,0 +1,262 @@
+/* Our Approach Section Styling */
+.approach-section {
+  background-color: #FFFFFF;
+}
+
+.approach-tenets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 64px;
+}
+
+.tenet-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: var(--transition-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.tenet-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: radial-gradient(80% 100px at 50% 0, rgba(29, 63, 115, 0.14), transparent 75%);
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tenet-card:hover {
+  border-color: rgba(29, 63, 115, 0.4);
+  transform: translateY(-8px) scale(1.008);
+  box-shadow: 0 24px 48px -12px rgba(29, 63, 115, 0.14), 0 4px 16px rgba(16, 17, 20, 0.04);
+  background-color: #FFFFFF;
+}
+
+.tenet-card:hover:before {
+  opacity: 1;
+}
+
+.tenet-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-navy-tint);
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), background-color .2s ease, color .2s ease, box-shadow .25s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.tenet-card:hover .tenet-icon-badge {
+  transform: scale(1.1);
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(29, 63, 115, 0.25);
+}
+
+.tenet-card h4 {
+  font-size: 1.25rem;
+  color: var(--color-navy);
+  position: relative;
+  z-index: 2;
+  transition: color .2s ease;
+}
+
+.tenet-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  position: relative;
+  z-index: 2;
+}
+
+/* Visual Connected Matrix Container */
+.approach-visual-container {
+  background: linear-gradient(180deg, #F8FAFD 0%, #FFFFFF 100%);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  box-shadow: var(--shadow-sm);
+}
+
+.approach-visual-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px auto;
+}
+
+.approach-visual-header h3 {
+  font-size: 1.8rem;
+  color: var(--color-navy);
+  margin-bottom: 8px;
+}
+
+.approach-visual-header p {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* Pillar Interactive Tab Bar */
+.pillars-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.pillar-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-full);
+  padding: 10px 20px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  cursor: pointer;
+  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1), background-color .2s ease, border-color .2s ease, box-shadow .25s ease, color .2s ease;
+}
+
+.pillar-tab-btn .pillar-btn-icon {
+  transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pillar-tab-btn:hover {
+  border-color: var(--color-navy);
+  background-color: var(--color-navy-tint);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(29, 63, 115, 0.12);
+}
+
+.pillar-tab-btn:hover .pillar-btn-icon {
+  transform: scale(1.15);
+}
+
+.pillar-tab-btn.is-active {
+  background-color: var(--color-navy);
+  color: #FFFFFF;
+  border-color: var(--color-navy);
+  box-shadow: 0 8px 20px rgba(29, 63, 115, 0.25);
+}
+
+.pillar-btn-icon {
+  font-size: 1.1rem;
+}
+
+/* Connected Matrix Card */
+.approach-interactive-card {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.pillar-header-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.pillar-icon-large {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.pillar-title {
+  font-size: 1.6rem;
+  color: var(--color-navy);
+}
+
+.pillar-tagline {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-orange);
+}
+
+.pillar-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.connections-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  background-color: var(--color-navy-tint);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-orange);
+}
+
+.connection-point {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.conn-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.conn-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Visual Graphic Node */
+.pillar-visual-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matrix-svg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+@media (max-width: 992px) {
+  .approach-tenets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-interactive-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .approach-visual-container {
+    padding: 24px;
+  }
+}
